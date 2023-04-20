@@ -29,7 +29,11 @@
 <h3>Objectives</h2>
 <p>Crear la landing de tu proyecto.</p>
 
-<h2>Information</h2>
+<h2>Tools</h2>
+* I used <a target="_blank" href="https://mui.com/">Material UI</a> and <a target="_blank" href="https://mui.com/material-ui/material-icons/">Material Icons</a> for Cart Widget.
+* I used <a target="_blank" href="https://materializecss.com/">Materialize</a> to set up a starter template for the site.
+
+<h2>More Information</h2>
 <ul>
   <li>📚 <a target="_blank" href="https://www.coderhouse.com/online/reactjs">Course web page</a></li>
   <li>🖍 <a target="_blank" href="https://drive.google.com/file/d/1G_SRPkYExFpTkmOvbEwj985rIgQ62kx9/view">Study Plan</a></li>
