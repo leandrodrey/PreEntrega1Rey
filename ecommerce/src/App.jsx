@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -24,17 +25,17 @@ function App() {
                 name: 'Contact Us',
                 link: 'text.com'
             }
-        ]
+        ];
 
     return (
-        <div className="App">
-            <header className="App-header">
+        <React.Fragment>
+            <header>
                 <NavBar
-                    title="Overlord Store"
+                    logo="Overlord Store" //TODO: Set a logo image
                     menuItems={menuItems}
                 />
             </header>
-        </div>
+        </React.Fragment>
     );
 }
 

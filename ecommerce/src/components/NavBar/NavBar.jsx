@@ -1,5 +1,5 @@
 import React from 'react'
-import {CartButton} from "./CartButton";
+import {CartWidget} from "./CartWidget";
 import NavBarItem from "./NavBarItem";
 
 const NavBar = (props) => {
@@ -10,7 +10,7 @@ const NavBar = (props) => {
         <React.Fragment>
             <nav className="white" role="navigation">
                 <div className="nav-wrapper container">
-                    <a id="logo-container" href="#" className="brand-logo">{props.title}</a>
+                    <a id="logo-container" href="#" className="brand-logo">{props.logo}</a>
                     <ul className="right hide-on-med-and-down">
                         {props.menuItems.map((menuItem, key) => (
                             <li>
@@ -20,7 +20,7 @@ const NavBar = (props) => {
                                 />
                             </li>
                         ))}
-                        <li><CartButton /></li>
+                        <li><CartWidget /></li>
                     </ul>
 
                     <ul id="nav-mobile" className="sidenav">
