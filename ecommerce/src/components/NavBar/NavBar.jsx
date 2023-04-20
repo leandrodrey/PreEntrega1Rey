@@ -25,6 +25,7 @@ const NavBar = (props) => {
                         </li>
                     </ul>
 
+                    {/* TODO: Apply changes for mobile menu
                     <ul id="nav-mobile" className="sidenav">
                         <li><a href="#">Navbar Link</a></li>
                         <li><a href="#">Navbar Link</a></li>
@@ -34,6 +35,7 @@ const NavBar = (props) => {
                     <a href="#" data-target="nav-mobile" className="sidenav-trigger">
                         <i className="material-icons">menu</i>
                     </a>
+                    */}
                 </div>
             </nav>
         </React.Fragment>
