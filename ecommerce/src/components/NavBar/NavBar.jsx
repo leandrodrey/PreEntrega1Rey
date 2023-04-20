@@ -4,15 +4,16 @@ import NavBarItem from "./NavBarItem";
 
 const NavBar = (props) => {
 
+    const logoImage = props.logo;
     const menuItems = props.menuItems;
 
     return (
         <React.Fragment>
             <nav className="white" role="navigation">
                 <div className="nav-wrapper container">
-                    <a id="logo-container" href="#" className="brand-logo">{props.logo}</a>
+                    <a id="logo-container" href="#" className="brand-logo">{logoImage}</a>
                     <ul className="right hide-on-med-and-down">
-                        {props.menuItems.map((menuItem, key) => (
+                        {menuItems.map((menuItem, key) => (
                             <li>
                                 <NavBarItem
                                     text={menuItem.name}
