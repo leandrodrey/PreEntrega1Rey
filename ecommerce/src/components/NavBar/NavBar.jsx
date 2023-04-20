@@ -20,7 +20,9 @@ const NavBar = (props) => {
                                 />
                             </li>
                         ))}
-                        <li><CartWidget /></li>
+                        <li>
+                            <CartWidget />
+                        </li>
                     </ul>
 
                     <ul id="nav-mobile" className="sidenav">
