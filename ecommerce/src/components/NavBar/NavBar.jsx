@@ -14,7 +14,7 @@ const NavBar = (props) => {
                     <a id="logo-container" href="#" className="brand-logo">{logoImage}</a>
                     <ul className="right hide-on-med-and-down">
                         {menuItems.map((menuItem, key) => (
-                            <li>
+                            <li key={key}>
                                 <NavBarItem
                                     text={menuItem.name}
                                     link={menuItem.link}
