@@ -7,7 +7,24 @@ import NavBar from "./components/NavBar/NavBar";
 
 function App() {
 
-    const menuItems = ["Home", "Store", "About Us", "Contact Us"];
+    const menuItems = [
+            {
+                name: 'Home',
+                link: 'text.com'
+            },
+            {
+                name: 'Store',
+                link: 'text.com'
+            },
+            {
+                name: 'About Us',
+                link: 'text.com'
+            },
+            {
+                name: 'Contact Us',
+                link: 'text.com'
+            }
+        ]
 
     return (
         <div className="App">

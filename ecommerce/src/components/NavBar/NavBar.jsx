@@ -1,5 +1,6 @@
 import React from 'react'
 import {CartButton} from "./CartButton";
+import NavBarItem from "./NavBarItem";
 
 const NavBar = (props) => {
 
@@ -11,19 +12,26 @@ const NavBar = (props) => {
                 <div className="nav-wrapper container">
                     <a id="logo-container" href="#" className="brand-logo">{props.title}</a>
                     <ul className="right hide-on-med-and-down">
-                        {menuItems.map((menuItem, key) => (
-                            <li><a href="#">{menuItem}</a></li>
+                        {props.menuItems.map((menuItem, key) => (
+                            <li>
+                                <NavBarItem
+                                    text={menuItem.name}
+                                    link={menuItem.link}
+                                />
+                            </li>
                         ))}
                         <li><CartButton /></li>
                     </ul>
 
                     <ul id="nav-mobile" className="sidenav">
-                        <li><a href="#">{props.menu}</a></li>
+                        <li><a href="#">Navbar Link</a></li>
                         <li><a href="#">Navbar Link</a></li>
                         <li><a href="#">Navbar Link</a></li>
                         <li><a href="#">Navbar Link</a></li>
                     </ul>
-                    <a href="#" data-target="nav-mobile" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                    <a href="#" data-target="nav-mobile" className="sidenav-trigger">
+                        <i className="material-icons">menu</i>
+                    </a>
                 </div>
             </nav>
         </React.Fragment>
