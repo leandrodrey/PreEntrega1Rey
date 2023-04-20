@@ -6,10 +6,16 @@ import '@fontsource/roboto/700.css';
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
+
+    const menuItems = ["Home", "Store", "About Us", "Contact Us"];
+
     return (
         <div className="App">
             <header className="App-header">
-                <NavBar />
+                <NavBar
+                    title="Overlord Store"
+                    menuItems={menuItems}
+                />
             </header>
         </div>
     );
