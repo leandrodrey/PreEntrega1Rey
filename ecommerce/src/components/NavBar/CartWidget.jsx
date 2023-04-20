@@ -6,7 +6,7 @@ export const CartWidget = () => {
     return (
         <React.Fragment>
             <IconButton color="primary" aria-label="shopping cart button">
-                <ShoppingCartIcon /> 5
+                <ShoppingCartIcon /> <span>5</span>
             </IconButton>
         </React.Fragment>
     )
