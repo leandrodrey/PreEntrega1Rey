@@ -30,8 +30,10 @@
 <p>Crear la landing de tu proyecto.</p>
 
 <h2>Tools</h2>
-* I used <a target="_blank" href="https://mui.com/">Material UI</a> and <a target="_blank" href="https://mui.com/material-ui/material-icons/">Material Icons</a> for Cart Widget.
-* I used <a target="_blank" href="https://materializecss.com/">Materialize</a> to set up a starter template for the site.
+<ul>
+    <li> I used <a target="_blank" href="https://mui.com/">Material UI</a> and <a target="_blank" href="https://mui.com/material-ui/material-icons/">Material Icons</a> for Cart Widget.
+    <li> I used <a target="_blank" href="https://materializecss.com/">Materialize</a> to set up a starter template for the site.
+</ul>
 
 <h2>More Information</h2>
 <ul>
