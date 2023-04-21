@@ -1,45 +1,134 @@
-import React from 'react'
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import AdbIcon from '@mui/icons-material/Adb';
 import {CartWidget} from "./CartWidget";
-import NavBarItem from "./NavBarItem";
 
-const NavBar = (props) => {
+function NavBar(props) {
 
-    const logoImage = props.logo;
-    const menuItems = props.menuItems;
+    // Props
+    const title = props.title;
+    const logo = props.logo;
+    const pages = props.menuItems;
+
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
 
     return (
-        <React.Fragment>
-            <nav className="white" role="navigation">
-                <div className="nav-wrapper container">
-                    <a id="logo-container" href="#" className="brand-logo">{logoImage}</a>
-                    <ul className="right hide-on-med-and-down">
-                        {menuItems.map((menuItem, key) => (
-                            <li key={key}>
-                                <NavBarItem
-                                    text={menuItem.name}
-                                    link={menuItem.link}
-                                />
-                            </li>
-                        ))}
-                        <li>
-                            <CartWidget />
-                        </li>
-                    </ul>
+        <AppBar position="static">
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
+                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="a"
+                        href="/"
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'none', md: 'flex' },
+                            fontFamily: 'monospace',
+                            fontWeight: 700,
+                            letterSpacing: '.3rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        {title}
+                    </Typography>
 
-                    {/* TODO: Apply changes for mobile menu
-                    <ul id="nav-mobile" className="sidenav">
-                        <li><a href="#">Navbar Link</a></li>
-                        <li><a href="#">Navbar Link</a></li>
-                        <li><a href="#">Navbar Link</a></li>
-                        <li><a href="#">Navbar Link</a></li>
-                    </ul>
-                    <a href="#" data-target="nav-mobile" className="sidenav-trigger">
-                        <i className="material-icons">menu</i>
-                    </a>
-                    */}
-                </div>
-            </nav>
-        </React.Fragment>
-    )
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <IconButton
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            color="inherit"
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{
+                                display: { xs: 'block', md: 'none' },
+                            }}
+                        >
+                            {props.menuItems.map((page, key) => (
+                                <MenuItem key={key} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">{page.name}</Typography>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Box>
+                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <Typography
+                        variant="h5"
+                        noWrap
+                        component="a"
+                        href=""
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'flex', md: 'none' },
+                            flexGrow: 1,
+                            fontFamily: 'monospace',
+                            fontWeight: 700,
+                            letterSpacing: '.3rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        {title}
+                    </Typography>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        {pages.map((page, key) => (
+                            <Button
+                                href={page.link}
+                                key={key}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                {page.name}
+                            </Button>
+                        ))}
+                    </Box>
+
+                    <Box sx={{ flexGrow: 0 }}>
+                        <Tooltip title="Shopping Cart">
+                            <CartWidget />
+                        </Tooltip>
+                    </Box>
+                </Toolbar>
+            </Container>
+        </AppBar>
+    );
 }
-export default NavBar
+export default NavBar;
