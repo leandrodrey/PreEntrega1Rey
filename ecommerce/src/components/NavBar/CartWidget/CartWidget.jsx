@@ -8,7 +8,7 @@ const CartWidget = () => {
     return (
         <React.Fragment>
             <IconButton aria-label="shopping cart button">
-                <Badge  className="shopping-cart__badge" badgeContent={4} max={999} color="secondary">
+                <Badge className="shopping-cart__badge" badgeContent={4} max={999} color="secondary">
                     <ShoppingCartIcon className="shopping-cart__icon" fontSize="medium" />
                 </Badge>
             </IconButton>
