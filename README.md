@@ -34,7 +34,7 @@
     <img alt="Material UI" src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white">
 </a> 
 <a target="_blank" href="https://mui.com/material-ui/material-icons/">
-    <img alt="Material UI" src="https://img.shields.io/badge/Material Icons-007FFF?style=for-the-badge&logo=mui&logoColor=white">
+    <img alt="Material UI" src="https://img.shields.io/badge/Material Icons-4e56a6?style=for-the-badge&logo=mui&logoColor=white">
 </a>
 
 <h2>More Information</h2>
