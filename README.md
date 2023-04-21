@@ -29,6 +29,12 @@
 <h3>Objectives</h2>
 <p>Crear la landing de tu proyecto.</p>
 
+<h2>How to run this project</h2>
+* Clone the repository
+* > cd ecommerce
+* > npm install 
+* > npm start
+  
 <h2>Tools used in this project</h2>
 <a target="_blank" href="https://mui.com/">
     <img alt="Material UI" src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white">
