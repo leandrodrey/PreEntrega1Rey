@@ -29,11 +29,13 @@
 <h3>Objectives</h2>
 <p>Crear la landing de tu proyecto.</p>
 
-<h2>Tools</h2>
-<ul>
-    <li> I used <a target="_blank" href="https://mui.com/">Material UI</a> and <a target="_blank" href="https://mui.com/material-ui/material-icons/">Material Icons</a> for Cart Widget.
-    <li> I used <a target="_blank" href="https://materializecss.com/">Materialize</a> to set up a starter template for the site.
-</ul>
+<h2>Tools used in this project</h2>
+<a target="_blank" href="https://mui.com/">
+    <img alt="Material UI" src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white">
+</a> 
+<a target="_blank" href="https://mui.com/material-ui/material-icons/">
+    <img alt="Material UI" src="https://img.shields.io/badge/Material Icons-007FFF?style=for-the-badge&logo=mui&logoColor=white">
+</a>
 
 <h2>More Information</h2>
 <ul>
