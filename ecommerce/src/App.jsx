@@ -7,12 +7,9 @@ import '@fontsource/roboto/700.css';
 import { StyledEngineProvider } from '@mui/material/styles';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
 import NavBar from "./components/NavBar/NavBar";
-import Card from "@mui/material/Card";
-import ImgMediaCard from "./components/Card/Card";
 import ItemListContainer from "./components/ItemListContainer";
+import imgLogo from './images/logo.png';
 
 const darkTheme = createTheme({
     palette: {
@@ -34,8 +31,8 @@ const darkTheme = createTheme({
 
 const siteInfo = {
     "name":"Overlord Store",
-    "logo": "Overlord Store", //TODO: Set a logo image
-    "greetingsMessage": "Bienvenidos"
+    "logo": [imgLogo],
+    "greetingsMessage": "Greetings"
 };
 
 const menuItems = [

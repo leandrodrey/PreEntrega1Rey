@@ -17,7 +17,7 @@ function NavBar(props) {
 
     // Props
     const title = props.title;
-    const logo = props.logo;
+    const logoImage = props.logo;
     const pages = props.menuItems;
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -34,7 +34,7 @@ function NavBar(props) {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <img className="logo" alt={title} src={logoImage} width="70px" />
                     <Typography
                         variant="h6"
                         noWrap
