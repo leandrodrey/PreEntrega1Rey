@@ -11,9 +11,9 @@ import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import imgLogo from './images/logo.png';
 
-const darkTheme = createTheme({
+const siteTheme = createTheme({
     palette: {
-        mode: 'dark',
+        mode: 'light',
         primary: {
             light: '#757ce8',
             main: '#3f50b5',
@@ -30,7 +30,7 @@ const darkTheme = createTheme({
 });
 
 const siteInfo = {
-    "name":"Overlord Store",
+    "name": "Overlord Store",
     "logo": [imgLogo],
     "greetingsMessage": "Greetings"
 };
@@ -57,7 +57,7 @@ const menuItems = [
 function App() {
     return (
         <StyledEngineProvider injectFirst>
-            <ThemeProvider theme={darkTheme}>
+            <ThemeProvider theme={siteTheme}>
                 <CssBaseline />
                 <header>
                     <NavBar

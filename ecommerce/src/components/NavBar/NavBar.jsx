@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './NavBar.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -34,9 +35,9 @@ function NavBar(props) {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <img className="logo" alt={title} src={logoImage} width="70px" />
+                    <img className="navbar__logo" alt={title} src={logoImage} />
                     <Typography
-                        variant="h6"
+                        variant="h4"
                         noWrap
                         component="a"
                         href="/"
@@ -44,10 +45,11 @@ function NavBar(props) {
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
                             fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
+                            fontWeight: 800,
+                            letterSpacing: '0',
                             color: 'inherit',
                             textDecoration: 'none',
+                            size: '3rem',
                         }}
                     >
                         {title}
