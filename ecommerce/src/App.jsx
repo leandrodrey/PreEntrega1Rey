@@ -9,7 +9,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
-import imgLogo from './images/logo.png';
+import imgLogo from './components/NavBar/images/logo.png';
 
 const siteTheme = createTheme({
     palette: {
